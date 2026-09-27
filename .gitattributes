@@ -3,3 +3,6 @@
 *.webp binary
 *.pdf binary
 *.pptx binary
+*.mp4 binary
+*.mp3 binary
+*.wav binary

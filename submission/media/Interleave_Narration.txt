@@ -1,0 +1,21 @@
+INTERLEAVE — NARRATED PROJECT OVERVIEW
+Voice: Tara (English India), macOS speech synthesis
+Format: six-slide overview narration; it is not a live application demonstration.
+
+Slide 1
+Interleave is a small .NET proof of concept about a practical concurrency problem: how do we turn a rare thread interleaving into an invariant we can test and a failure we can inspect? It focuses on two synthetic, in-memory examples: the Last Seat and a Duplicate Job Claim. This is a narrated project overview, not a recording of a hosted application.
+
+Slide 2
+In Last Seat, two callers raced for one remaining reservation. Coyote explored five baseline paths and recorded one invariant violation: two successful reservations against capacity one. The rule is direct: successful reservations cannot exceed capacity. A second scenario makes the same class of error concrete: two workers both reported that they claimed the same job. Its frozen baseline report records eight fair paths and one violation.
+
+Slide 3
+The workflow preserves failure evidence before repair. Microsoft Coyote controls schedules and reports whether an invariant fails. Baseline reports, traces, and checksums are preserved in the repository. IBM Bob was used as a development tool; it does not power this program at runtime. The test oracle checks returned business outcomes, so a stale shared counter cannot conceal duplicate claims.
+
+Slide 4
+For Last Seat, one lock covers the availability check, decrement, and reservation insertion. For job claiming, the lock spans the status check and transition to claimed. In both examples, the atomic boundary follows the invariant. These are local, bounded examples. They illustrate an approach without claiming to be a general concurrency framework.
+
+Slide 5
+On the repaired code, each scenario passed a bounded Coyote exploration of five hundred fair paths, with zero bugs reported under a one-thousand-step limit. The full local sequential suite passed thirteen of thirteen tests; the Coyote concurrency suite passed nine of nine. The solution built with zero warnings and errors. These results cover only the explored schedules, not every possible execution.
+
+Slide 6
+There are clear release gates. This is a local prototype, not a hosted application, and this overview is not a live product demonstration. Exact replay alignment for both frozen traces remains unresolved. Remote continuous integration, a performance benchmark, and genuine IBM Bob session-summary screenshots are also not verified here. The project makes a bounded evidence claim: two baseline failures were captured, and bounded repaired checks passed. A user-facing deployment and real demo must be recorded before claiming a complete product submission.

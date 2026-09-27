@@ -2,6 +2,8 @@
 
 **Concurrency defects, captured as evidence and checked against a repair.**
 
+**Source repository:** [KashyapSinh-Gohil/Interleave](https://github.com/KashyapSinh-Gohil/Interleave)
+
 INTERLEAVE is a .NET proof of concept for turning rare thread interleavings into executable invariants, preserving real Coyote failure traces, and checking repaired implementations. The repository currently contains two in-memory examples: Last Seat and Duplicate Job Claim.
 
 > Current scope: a test-focused proof of concept. There is no user-facing web application, hosted demo, Schedule Capsule pipeline, or performance benchmark in this release.
@@ -42,8 +44,11 @@ tests/Interleave.Tests.Sequential/   Deterministic behavior and input checks
 tests/Interleave.Tests.Concurrency/  Coyote schedule exploration and replay
 witnesses/frozen/                    Immutable raw reports, traces, and checksums
 docs/                                Architecture, limits, replay, milestones, and compliance
+submission/                          Draft entry copy, cover art, and pitch deck exports
 .github/workflows/                   Build and test workflow
 ```
+
+The current six-slide deck is available as an [editable PowerPoint](submission/media/Interleave_Pitch_Deck_M2.pptx) and [PDF](submission/media/Interleave_Pitch_Deck_M2.pdf). The [narrated overview video](submission/media/Interleave_Narrated_Overview.mp4), [MP3 narration](submission/media/Interleave_Narration.mp3), and [transcript](submission/media/Interleave_Narration.txt) are also included. These are a project overview and evidence summary, not a live product demo. The [cover background](submission/assets/interleave-cover.png) is original artwork; it does not contain the official IBM Bob mascot mark.
 
 ## Run locally
 

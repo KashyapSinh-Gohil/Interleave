@@ -78,9 +78,13 @@ it does not prove all schedules do.
 
 - [x] CI workflow is configured to build the solution, run sequential and full Coyote regression suites, require bounded exploration to pass, and verify frozen witness digests before replay. The workflow has not yet been run remotely; no hosted CI result is verified.
 - [x] Finish the README, architecture, limitations, contribution, and security documentation.
-- [ ] Create a public GitHub repository and pin `v1.0-hackathon` to the verified release SHA.
+- [x] Create the public GitHub repository `KashyapSinh-Gohil/Interleave` and push source commit `1fd5481` to `main`.
+- [ ] Push the final deck, cover background, and narrated-overview files in a follow-up commit; create a version tag only after the complete artifact set is finalized.
 - [ ] Capture genuine IBM Bob session summaries for the implementation and review milestones.
-- [ ] Produce an editable pitch deck and PDF, plus a professionally recorded video of at most 3 minutes with at least 90 seconds of real product demonstration.
+- [x] Produce and review a six-slide editable M2 pitch deck and matching PDF locally; they are an evidence overview, not a live product demo.
+- [x] Produce a 164-second narrated overview MP4 and matching MP3/transcript locally; the overview is not a live product demonstration.
+- [ ] Add the official IBM Bob mascot mark to the cover when the source asset is available. The current cover uses original abstract artwork and no fabricated logo.
+- [ ] Produce a video of at most 3 minutes with at least 90 seconds of real product demonstration. A narrated deck overview does not satisfy this live-demo gate.
 - [ ] Verify the live repository, tag, deployment, video, and deck links.
 
 ## M5 — Competition compliance and submission
@@ -92,6 +96,6 @@ it does not prove all schedules do.
 
 ## Current external dependencies
 
-- GitHub CLI authentication is invalid; a public repository cannot be created or pushed until the account is reauthenticated.
+- The source repository is public at `https://github.com/KashyapSinh-Gohil/Interleave`, with source commit `1fd5481` on `main`. The release tag, hosted application, and remote CI result remain open.
 - The official event page lists September 25–27, 2026 and a 48-hour build window. LabLab's general guide requires individual registration for every team member, team membership (including solo participants), an online prototype, video, and pitch deck. The readable event page does not expose the exact cutoff, event-specific eligibility, or scoring weights; see `docs/competition-compliance.md`.
 - IBM Bob is the intended development partner. No IBM model/runtime integration has been verified, so public materials must describe Bob as the development tool rather than claim IBM powers the product at runtime.

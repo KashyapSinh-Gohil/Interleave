@@ -36,12 +36,17 @@ Step 1 screenshot shows these exact limits:
 | Submission title | 5–50 characters |
 | Short description | 50–255 characters |
 | Long description | 500 words maximum |
+| IBM Bob Usage Statement | 500–4,000 characters (observed form counter) |
 
 The Step 2 checklist previously observed in the form requires a video and PDF
 slide presentation; a cover image is optional. The project release brief adds
 the target of an MP4 no longer than 3 minutes with at least 90 seconds of real
-working-product demonstration. The cover artwork is available locally, but the
-final PDF and recording are not yet verified.
+working-product demonstration. The six-slide PDF and editable PPTX exist locally.
+A narrated overview video has been rendered from the deck, but it is not a live
+product demonstration. The project has no deployed application, so the real-demo
+requirement remains unmet. The new cover artwork is local; the authentic IBM Bob
+mascot mark is not included because the verified original artwork was not
+available when this cover was prepared.
 
 The exact field labels and required-star markers on Step 3 have not been
 verified from the live form. The event submission checklist calls for a public
@@ -59,18 +64,20 @@ unknown extra fields. Nothing has been saved or submitted on LabLab.
 | Individual registration, team roster, exact cutoff, and eligibility | Not checked or confirmed. | Open |
 | Accurate IBM/runtime attribution | Bob 2.0 was a development tool; Microsoft Coyote supplies test verdicts. No IBM model or runtime service is integrated. | Checked |
 | Project code and local verification | Two repaired in-memory scenarios; local build succeeded (0 warnings, 0 errors), sequential tests 13/13 and Coyote tests 9/9 passed with absolute paths to both frozen traces. | Verified locally |
-| Public GitHub source repository | No remote exists. GitHub CLI token is invalid; project has not been pushed. | Open |
+| Public GitHub source repository | `https://github.com/KashyapSinh-Gohil/Interleave`; source commit `1fd5481` pushed to `main`. | Source published |
 | Online working demo and application URL | No user-facing application or deployment exists. | Open |
-| PDF deck and editable PPTX | An early M1 deck exists and is outdated; final M2 version remains to be exported. | Open |
-| MP4 presentation/real product demo | Not recorded. | Open |
-| Cover image | Original project cover artwork exists locally at `submission/assets/interleave-cover.png`. | Prepared locally |
+| PDF deck and editable PPTX | Six-slide M2 evidence deck exported and reviewed locally; it summarizes both scenarios and bounded results. | Prepared locally |
+| MP4 presentation/real product demo | 164-second narrated overview MP4 and matching MP3 are ready. They are not a live product demo; no app exists to demonstrate. | Demo requirement open |
+| Cover image | New project cover background exists locally at `submission/assets/interleave-cover.png`; authentic Bob mascot mark is not included. | Prepared locally |
 | Data use | Synthetic in-memory tests; no external participant data. | Checked |
 | Event-specific score weights | No readable event-specific rubric found. | Unverified |
 
 ## Submission text draft
 
 `submission/copy/draft.md` contains updated Step 1 copy with title, short
-description, and long-description lengths. It has not been entered into LabLab.
+description, long-description and Bob-usage text, plus draft category and
+technology tags. Exact tag picker options have not been verified. It has not
+been entered into LabLab.
 The entry must remain a draft until the public repository, screenshot folder,
 working demo URL, final deck/PDF, video, and registration checks are complete.
 
