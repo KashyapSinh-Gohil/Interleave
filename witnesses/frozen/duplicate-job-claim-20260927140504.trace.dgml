@@ -1,0 +1,19 @@
+<DirectedGraph xmlns='http://schemas.microsoft.com/vs/2009/dgml'>
+  <Nodes>
+    <Node Id='Operation(0)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(0).Interleave.Tests.Concurrency.DuplicateJobClaimEvidenceCapture.RunConcurrentClaims' Label='Interleave.Tests.Concurrency.DuplicateJobClaimEvidenceCapture.RunConcurrentClaims'/>
+    <Node Id='Operation(1)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(1).Interleave.Core.JobClaimService.TryClaim' Label='Interleave.Core.JobClaimService.TryClaim'/>
+    <Node Id='Operation(2)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(2).Interleave.Core.JobClaimService.TryClaim' Label='Interleave.Core.JobClaimService.TryClaim'/>
+  </Nodes>
+  <Links>
+    <Link Source='Operation(0)' Target='Operation(0).Interleave.Tests.Concurrency.DuplicateJobClaimEvidenceCapture.RunConcurrentClaims' Category='Contains'/>
+    <Link Source='Operation(1)' Target='Operation(1).Interleave.Core.JobClaimService.TryClaim' Category='Contains'/>
+    <Link Source='Operation(2)' Target='Operation(2).Interleave.Core.JobClaimService.TryClaim' Category='Contains'/>
+    <Link Source='Operation(0).Interleave.Tests.Concurrency.DuplicateJobClaimEvidenceCapture.RunConcurrentClaims' Target='Operation(2).Interleave.Core.JobClaimService.TryClaim' Index='0'/>
+    <Link Source='Operation(0).Interleave.Tests.Concurrency.DuplicateJobClaimEvidenceCapture.RunConcurrentClaims' Target='Operation(1).Interleave.Core.JobClaimService.TryClaim' Index='0'/>
+  </Links>
+  <Styles>
+  </Styles>
+</DirectedGraph>

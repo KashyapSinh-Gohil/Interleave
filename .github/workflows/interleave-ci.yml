@@ -1,0 +1,68 @@
+name: INTERLEAVE CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_VERSION: "8.0.x"
+  COYOTE_VERSION: "1.7.11"
+
+jobs:
+  verify:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore and build
+        run: |
+          dotnet restore
+          dotnet build --no-restore --configuration Debug
+
+      - name: Run sequential tests
+        run: |
+          dotnet test tests/Interleave.Tests.Sequential/ \
+            --no-build \
+            --configuration Debug \
+            --logger "trx;LogFileName=sequential-results.trx" \
+            --results-directory TestResults/
+
+      - name: Verify frozen evidence checksums
+        run: cd witnesses/frozen && shasum -a 256 -c SHA256SUMS
+
+      - name: Install Coyote CLI
+        run: |
+          dotnet tool install --global Microsoft.Coyote.CLI --version ${{ env.COYOTE_VERSION }}
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Rewrite assemblies for controlled scheduling
+        run: coyote rewrite coyote.rewrite.json
+
+      - name: Run Coyote concurrency and replay suite
+        env:
+          INTERLEAVE_WITNESS_TRACE: ${{ github.workspace }}/witnesses/frozen/last-seat-20260927082356.trace
+          INTERLEAVE_JOB_CLAIM_TRACE: ${{ github.workspace }}/witnesses/frozen/duplicate-job-claim-20260927140504.trace
+        run: |
+          dotnet test tests/Interleave.Tests.Concurrency/ \
+            --no-build \
+            --configuration Debug \
+            --logger "trx;LogFileName=concurrency-results.trx" \
+            --results-directory TestResults/
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults/
+          if-no-files-found: ignore

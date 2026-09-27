@@ -1,0 +1,16 @@
+[coyote::test] Runtime 'cc98af1d-e616-41ef-afd4-b81744af7dbc' started the test on thread '5' using the 'random' strategy.
+[coyote::warning] Invoking 'System.Guid.NewGuid' introduces data non-determinism that is not intercepted and controlled during testing, so it can interfere with the ability to reproduce bug traces.
+[coyote::warning] Invoking 'System.Guid.NewGuid' introduces data non-determinism that is not intercepted and controlled during testing, so it can interfere with the ability to reproduce bug traces.
+[coyote::error] INVARIANT VIOLATED: 2 successful reservations were made against a venue with capacity 1. (alice=57c94e07369a4c0fb103a7ab5732e875, bob=3e29f28ba3364d958a8beafe63798afe)
+[coyote::test] Exploration finished in runtime 'cc98af1d-e616-41ef-afd4-b81744af7dbc' [found a bug using the 'random' strategy].
+[coyote::report] Testing statistics:
+[coyote::report] Found 1 bug.
+[coyote::report] Found 1 uncontrolled invocation.
+[coyote::report] Exploration statistics:
+[coyote::report] Explored 5 execution paths: 5 fair, 0 unfair, 5 unique.
+[coyote::report] Found 20.00% buggy execution paths.
+[coyote::report] Visited 1 unique state.
+[coyote::report] Controlled 15 operations: 3 (min), 3 (avg), 3 (max).
+[coyote::report] Degree of concurrency: 3 (min), 3 (avg), 3 (max).
+[coyote::report] Degree of operation grouping: 3 (min), 3 (avg), 3 (max).
+[coyote::report] Number of scheduling decisions in fair terminating execution paths: 7 (min), 7 (avg), 8 (max).

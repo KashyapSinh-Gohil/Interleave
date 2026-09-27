@@ -1,0 +1,19 @@
+<DirectedGraph xmlns='http://schemas.microsoft.com/vs/2009/dgml'>
+  <Nodes>
+    <Node Id='Operation(0)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(0).Interleave.Tests.Concurrency.LastSeatConcurrencyTests.RunConcurrentReservations' Label='Interleave.Tests.Concurrency.LastSeatConcurrencyTests.RunConcurrentReservations'/>
+    <Node Id='Operation(1)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(1).Interleave.Core.SeatReservationService.TryReserve' Label='Interleave.Core.SeatReservationService.TryReserve'/>
+    <Node Id='Operation(2)' Category='Operation' Group='Expanded'/>
+    <Node Id='Operation(2).Interleave.Core.SeatReservationService.TryReserve' Label='Interleave.Core.SeatReservationService.TryReserve'/>
+  </Nodes>
+  <Links>
+    <Link Source='Operation(0)' Target='Operation(0).Interleave.Tests.Concurrency.LastSeatConcurrencyTests.RunConcurrentReservations' Category='Contains'/>
+    <Link Source='Operation(1)' Target='Operation(1).Interleave.Core.SeatReservationService.TryReserve' Category='Contains'/>
+    <Link Source='Operation(2)' Target='Operation(2).Interleave.Core.SeatReservationService.TryReserve' Category='Contains'/>
+    <Link Source='Operation(0).Interleave.Tests.Concurrency.LastSeatConcurrencyTests.RunConcurrentReservations' Target='Operation(1).Interleave.Core.SeatReservationService.TryReserve' Index='0'/>
+    <Link Source='Operation(0).Interleave.Tests.Concurrency.LastSeatConcurrencyTests.RunConcurrentReservations' Target='Operation(2).Interleave.Core.SeatReservationService.TryReserve' Index='0'/>
+  </Links>
+  <Styles>
+  </Styles>
+</DirectedGraph>

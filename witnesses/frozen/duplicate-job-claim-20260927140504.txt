@@ -1,0 +1,13 @@
+[coyote::test] Runtime 'bed72055-bd14-4011-85fb-fb25485070aa' started the test on thread '12' using the 'fair-delay-bounding' strategy.
+[coyote::error] INVARIANT VIOLATED: job 'job-1' was claimed by 2 worker(s) but must be claimed by at most 1. (workerA=Claimed, workerB=Claimed)
+[coyote::test] Exploration finished in runtime 'bed72055-bd14-4011-85fb-fb25485070aa' [found a bug using the 'fair-delay-bounding' strategy].
+[coyote::report] Testing statistics:
+[coyote::report] Found 1 bug.
+[coyote::report] Exploration statistics:
+[coyote::report] Explored 8 execution paths: 8 fair, 0 unfair, 7 unique.
+[coyote::report] Found 12.50% buggy execution paths.
+[coyote::report] Visited 1 unique state.
+[coyote::report] Controlled 24 operations: 3 (min), 3 (avg), 3 (max).
+[coyote::report] Degree of concurrency: 2 (min), 2 (avg), 3 (max).
+[coyote::report] Degree of operation grouping: 3 (min), 3 (avg), 3 (max).
+[coyote::report] Number of scheduling decisions in fair terminating execution paths: 7 (min), 7 (avg), 8 (max).

@@ -1,0 +1,30 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.presentation-build/
+
+# dotnet tool manifests (install globally in CI instead)
+.config/
+
+# Interleave witness output (generated during test runs, NOT committed)
+# The frozen trace files used for replay ARE committed under witnesses/frozen/
+tests/**/witnesses/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rider / JetBrains
+.idea/
+*.sln.iml

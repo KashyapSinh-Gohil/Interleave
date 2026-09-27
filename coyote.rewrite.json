@@ -1,0 +1,7 @@
+{
+  "AssembliesPath": "tests/Interleave.Tests.Concurrency/bin/Debug/net8.0",
+  "Assemblies": [
+    "Interleave.Tests.Concurrency.dll",
+    "Interleave.Core.dll"
+  ]
+}

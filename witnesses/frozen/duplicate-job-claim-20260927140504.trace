@@ -1,0 +1,35 @@
+{
+  "TestName": "",
+  "CoyoteVersion": "1.7.11.0",
+  "Settings": {
+    "Strategy": "fair-delay-bounding",
+    "StrategyBound": 0,
+    "MaxFairSchedulingSteps": 10000,
+    "MaxUnfairSchedulingSteps": 1000,
+    "TimeoutDelay": 10,
+    "DeadlockTimeout": 1000,
+    "PortfolioMode": "fair",
+    "IsLivenessCheckingEnabled": true,
+    "LivenessTemperatureThreshold": 5000,
+    "IsCollectionAccessRaceCheckingEnabled": true,
+    "IsLockAccessRaceCheckingEnabled": true,
+    "IsAtomicOperationRaceCheckingEnabled": true,
+    "IsVolatileOperationRaceCheckingEnabled": true,
+    "IsMemoryAccessRaceCheckingEnabled": false,
+    "IsControlFlowRaceCheckingEnabled": false,
+    "IsPartiallyControlledConcurrencyAllowed": true,
+    "IsPartiallyControlledDataNondeterminismAllowed": true,
+    "UncontrolledConcurrencyResolutionAttempts": 10,
+    "UncontrolledConcurrencyResolutionDelay": 1000
+  },
+  "Steps": [
+    "op(0:2654435832),sp(Create),next(0:2654435832)",
+    "op(0:2654435832),sp(Create),next(0:2654435832)",
+    "op(0:2654435832),sp(Pause),next(2:5364916925003925)",
+    "op(2:5364916925003925),sp(Interleave),next(1:175247760700)",
+    "op(1:175247760700),sp(Interleave),next(2:5364916925003925)",
+    "op(2:5364916925003925),sp(Interleave),next(1:175247760700)",
+    "op(1:175247760700),sp(Interleave),next(1:175247760700)",
+    "op(1:175247760700),sp(Complete),next(2:5364916925003925)"
+  ]
+}
